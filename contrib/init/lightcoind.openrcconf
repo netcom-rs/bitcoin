@@ -1,0 +1,33 @@
+# /etc/conf.d/lightcoind: config file for /etc/init.d/lightcoind
+
+# Config file location
+#LIGHTCOIND_CONFIGFILE="/etc/lightcoin/lightcoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $LIGHTCOIND_USER)
+#LIGHTCOIND_PIDDIR="/var/run/lightcoind"
+
+# What filename to give the pidfile
+#LIGHTCOIND_PIDFILE="${LIGHTCOIND_PIDDIR}/lightcoind.pid"
+
+# Where to write lightcoind data (be mindful that the blockchain is large)
+#LIGHTCOIND_DATADIR="/var/lib/lightcoind"
+
+# User and group to own lightcoind process
+#LIGHTCOIND_USER="lightcoin"
+#LIGHTCOIND_GROUP="lightcoin"
+
+# Path to lightcoind executable
+#LIGHTCOIND_BIN="/usr/bin/lightcoind"
+
+# Nice value to run lightcoind under
+#LIGHTCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#LIGHTCOIND_OPTS=""
+
+# The timeout in seconds OpenRC will wait for lightcoind to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+LIGHTCOIND_SIGTERM_TIMEOUT=600
